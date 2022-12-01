@@ -1,0 +1,164 @@
+﻿@model IEnumerable<teste_mvc.Models.Aluno>
+
+@{
+    ViewBag.Title = "AlunoPessoais";
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia transforma</title>
+
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/fontes.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+    <link href="~/Content/home1-config.css" rel="stylesheet" />
+    <link href="~/Content/cadastros.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <section class="header-site">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="foto-cabeca row justify-content-center align-items-center linha-cabeca ">
+                        <img class="col-lg-2 col-6 logo-foto foto-config-tamanho" src="~/midia/logo-nova-500.png" alt="">
+                        <h1 class="text-center titulo-logo col-lg-8 col-6 text-align-center ">ACADEMIA TRANSFORMA</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="botto text-center margem">
+            <h4 class="text-dark">INFORMAÇÕES PESSOAIS</h4>
+            <a class="text-dark" asp-controller="Login" asp-action="Logout">SAIR</a>
+        </div>
+
+        <div class="principals1 container">
+            <hr class="text-dark" />
+
+            <div class="row">
+
+                @foreach (var item in ViewBag.LISTA)
+                {
+
+                    <div class="row">
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Nome</label>
+                            <input disabled type="text" class="form-control" value="@item.Nome" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label type="date" class="text-dark">Data Nascimento</label>
+                            <input disabled type="text" class="form-control" value="@item.DataNasc.ToString("dd/MM/yyyy")" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">CPF</label>
+                            <input disabled type="text" class="form-control" value="@item.CPF" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Rua</label>
+                            <input disabled type="text" class="form-control" value="@item.Rua" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Número</label>
+                            <input disabled type="text" class="form-control" value="@item.Numero" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Bairro</label>
+                            <input disabled type="text" class="form-control" value="@item.Bairro" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">CEP</label>
+                            <input disabled type="text" class="form-control" value="@item.Cep" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Telefone</label>
+                            <input disabled type="text" class="form-control" value="@item.Telefone" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Email</label>
+                            <input disabled type="text" class="form-control" value="@item.Email" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Cidade</label>
+                            <input disabled type="text" class="form-control" value="@item.Cidade" />
+                        </div>
+
+                    </div>
+
+
+                    @foreach (var itens in ViewBag.Pac)
+                    {
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Descrição</label>
+                            <input disabled type="text" class="form-control" value="@itens.Descricao" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Valor Mensalidade</label>
+                            <input disabled type="text" class="form-control" value="@itens.ValorMensalidade" />
+                        </div>
+                    }
+
+                    @foreach (var ite in ViewBag.Resp)
+                    {
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark"> Nome Responsável</label>
+                            <input disabled type="text" class="form-control" value="@ite.Nome" />
+                        </div>
+
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">CPF Responsavel</label>
+                            <input disabled type="text" class="form-control" value="@ite.Cpf" />
+                        </div>
+                    }
+                    @foreach (var ite in ViewBag.Mod)
+                    {
+                        <div class=" col-12 col-sm-6 margem">
+                            <label class="text-dark">Modalidade</label>
+                            <input disabled type="text" class="form-control" value="@ite.Nome" />
+                        </div>
+                    }
+
+                    <div><hr class="text-dark" /></div>
+
+                    <div class="principals1 container margem">
+                        <div class="row">
+                            <div class=" col-12 col-sm-6">
+                                <a class="btn btn-secondary" asp-controller="Login" asp-action="Logout">SAIR</a>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+        </div>
+
+    </section>
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+</body>
+</html>
+
+

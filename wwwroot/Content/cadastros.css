@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.principals{
+    background-color: #f77e0c;
+    border-radius: 15px;
+}
+
+.cadastrae-ee{
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.botto{
+    padding-bottom: 15px;
+}
+
+.bot-alu-prof{
+    margin-top: 20px;
+    padding-top: 15px;
+}

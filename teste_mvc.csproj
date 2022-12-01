@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="wwwroot\Filtro\Autenticacao.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Controllers\HomeController.cs" />
+    <Content Include="Dados\Context.cs" />
+    <Content Include="Dados\Dbinitializer.cs" />
+    <Content Include="Models\ErrorViewModel.cs" />
+    <Content Include="Models\Responsavel.cs" />
+    <Content Include="Models\Usuario.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Scripts\bootstrap.bundle.js" />
+    <None Include="wwwroot\Scripts\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\Scripts\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\Scripts\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\Scripts\bootstrap.esm.js" />
+    <None Include="wwwroot\Scripts\bootstrap.esm.js.map" />
+    <None Include="wwwroot\Scripts\bootstrap.esm.min.js" />
+    <None Include="wwwroot\Scripts\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\Scripts\bootstrap.js" />
+    <None Include="wwwroot\Scripts\bootstrap.js.map" />
+    <None Include="wwwroot\Scripts\bootstrap.min.js" />
+    <None Include="wwwroot\Scripts\jquery-3.4.1.intellisense.js" />
+    <None Include="wwwroot\Scripts\jquery-3.4.1.js" />
+    <None Include="wwwroot\Scripts\jquery-3.4.1.min.js" />
+    <None Include="wwwroot\Scripts\jquery-3.4.1.min.map" />
+    <None Include="wwwroot\Scripts\jquery-3.4.1.slim.js" />
+    <None Include="wwwroot\Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="wwwroot\Scripts\jquery-3.4.1.slim.min.map" />
+    <None Include="wwwroot\Scripts\jquery.validate-vsdoc.js" />
+    <None Include="wwwroot\Scripts\jquery.validate.js" />
+    <None Include="wwwroot\Scripts\jquery.validate.min.js" />
+    <None Include="wwwroot\Scripts\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\Scripts\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\Scripts\modernizr-2.8.3.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>

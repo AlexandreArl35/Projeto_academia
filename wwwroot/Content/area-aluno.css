@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.link-aluno{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quadro-link{
+    margin-top: 15px;
+}
+
+.div-fotos{
+    text-align: center;
+}
+
+.escrito-treino{
+    text-align: center;
+}
+
+.contorno{
+    border: 2px solid  #f77e0c;
+    background-color:  #f77e0c63;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.princ{
+    margin-top: 15px;
+}
+
+.link-trei{
+    margin-top: 10px;
+}
+
+.link-trei:hover{
+    background-color: #f77e0c;
+}
+
+.escrito-treino-ori{
+    margin-bottom: 10px;
+    font-family: texto-titulo;
+    font-weight: 900;
+}
+
+.foto-treinameto{
+    border-radius: 15px;
+}
+
+.bloco{
+    margin-bottom: 15px;
+}
+
+.link-master{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.linkk{
+    text-align: center;
+}
+
+#menu{
+    text-align: center;
+}

@@ -1,0 +1,173 @@
+﻿@model teste_mvc.Models.Aluno
+@using teste_mvc.Models
+@{
+    ViewData["Title"] = "Delete";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia transforma</title>
+
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/fontes.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+    <link href="~/Content/home1-config.css" rel="stylesheet" />
+    <link href="~/Content/cadastros.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <section class="header-site">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="foto-cabeca row justify-content-center align-items-center linha-cabeca ">
+                        <img class="col-lg-2 col-6 logo-foto foto-config-tamanho" src="~/midia/logo-nova-500.png" alt="">
+                        <h1 class="text-center titulo-logo col-lg-8 col-6 text-align-center ">ACADEMIA TRANSFORMA</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="botto text-center margem">
+            <h4 class="text-dark">EXCLUIR</h4>
+        </div>
+
+        <div class="principals1 container">
+            <hr class="text-dark" />
+            <form asp-action="Delete">
+                <div class="row">
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="CPF" class="control-label"></label>
+                        <input asp-for="CPF" class="form-control" />
+                        <span asp-validation-for="CPF" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="DataNasc" class="control-label"></label>
+                        <input asp-for="DataNasc" class="form-control" />
+                        <span asp-validation-for="DataNasc" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Telefone" class="control-label"></label>
+                        <input asp-for="Telefone" class="form-control" />
+                        <span asp-validation-for="Telefone" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col 12 col-sm-6 margem">
+                        <label asp-for="Rua" class="control-label"></label>
+                        <input asp-for="Rua" class="form-control" />
+                        <span asp-validation-for="Rua" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Cep" class="control-label"></label>
+                        <input asp-for="Cep" class="form-control" />
+                        <span asp-validation-for="Cep" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Numero" class="control-label"></label>
+                        <input asp-for="Numero" class="form-control" />
+                        <span asp-validation-for="Numero" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Bairro" class="control-label"></label>
+                        <input asp-for="Bairro" class="form-control" />
+                        <span asp-validation-for="Bairro" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="PacoteId" class="control-label"></label>
+                        <select asp-for="PacoteId" class="form-control" asp-items="ViewBag.PacoteId"></select>
+                        <span asp-validation-for="PacoteId" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Cidade" class="control-label"></label>
+                        <input asp-for="Cidade" class="form-control" />
+                        <span asp-validation-for="Cidade" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Observacao" class="control-label"></label>
+                        <input asp-for="Observacao" class="form-control" />
+                        <span asp-validation-for="Observacao" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label class="control-label">Nome Responsavel</label>
+                        <input asp-for="Responsavel.Nome" class="form-control" />
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Responsavel.Cpf" class="control-label">Cpf Responsável</label>
+                        <input asp-for="Responsavel.Cpf" class="form-control" />
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label class="control-label">Usuário</label>
+                        <input asp-for="Usuario.Login" class="form-control" />
+                        <span asp-validation-for="Usuario.Login" class="text-danger"></span>
+                    </div>
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label class="control-label">Senha</label>
+                        <input asp-for="Usuario.Senha" class="form-control" />
+                        <span asp-validation-for="Usuario.Senha" class="text-danger"></span>
+                    </div>
+
+                    <div><hr class="text-dark" /></div>
+
+                    <div class="principals1 container margem">
+                        <div class="row">
+                            <div class=" col-6 col-sm-6">
+                                <input type="submit" value="Delete" class="btn btn-secondary" /> |
+                            </div>
+
+                            <div class=" col-6 col-sm-6">
+                                <a class="btn btn-secondary" asp-action="Index">Voltar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input hidden asp-for="Id" class="form-control" />
+                    <input hidden asp-for="UsuarioId" />
+                    <input hidden asp-for="Responsavel.Id" />
+                    <input hidden asp-for="Responsavel.AlunoId" />
+                    <input hidden asp-for="Usuario.Id" />
+                    <input hidden asp-for="Usuario.Perfis" />
+                    <input hidden asp-for="Usuario.Pessoa" />
+                    <input hidden asp-for="PacoteId" />
+                    <input hidden asp-for="Id" />
+
+                </div>
+             </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,91 @@
+@media screen and (max-width: 500px) {
+    .foto-config-tamanho{
+        width: 120px;
+    }
+    .arre{
+        width: 200px;
+        background-color: aqua;
+    }
+  }
+
+@media screen and (max-width: 1406px) {
+    .arre{
+        width: 500px;
+        background-color: aqua;
+    }
+}
+
+@media screen and (max-width: 1203px) {
+    .arre{
+        width: 400px;
+        background-color: aqua;
+    }
+}
+
+@media screen and (max-width: 1203px) {
+    .arre{
+        width: 400px;
+        background-color: aqua;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .botao-zap{
+        margin: auto;
+        background-color: #00b932;
+        
+        width: 250px;
+        border-radius: 20px;
+    }
+
+    .linha-face{
+        margin: auto;
+        width: 250px;
+        margin-top: 15px;
+    }
+
+    .face-iinst{
+        width: 90px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 550px) {
+    .area-logar{
+    margin: auto;
+    width: 90%;
+    border-radius: 15px;
+    background-color: #f77e0c;
+    position: static;
+    top: 50%;
+    left: 50%;
+    transform: translate(1%, 1%);
+    box-shadow:  0PX 1PX 6PX -1px black;
+    }
+
+    .foto-cima{
+        width: 100%;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .botao2{
+        margin-bottom: 15px;
+    }
+
+    .ffg{
+        padding-bottom: 15px;
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .principals{
+        background-color: #ffffff;
+        border-radius: 15px;
+    }
+     
+}

@@ -1,0 +1,53 @@
+﻿@model teste_mvc.Models.Usuario
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="~/Content/fontes.css" rel="stylesheet" />
+    <link href="~/Content/login.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+    <link href="~/Content/home1-config.css" rel="stylesheet" />
+</head>
+<body>
+        <div class="area-logar">
+            <p class="text-center ffg">
+                <h1 class="escrito-login">LOGIN</h1>
+            </p>
+            <div class="row">
+                <div class="col-4 offset-4">
+                    <form asp-controller="Login" asp-action="Logar" method="post">
+                        <div>
+                            <div class="objetos-logar">
+                                <div class="input-group logar-form font-form">
+                                    <div class="input-group-prepend">
+                                        <input type="text" asp-for="Login" class="form-control font-form" placeholder="Usuário" aria-label="Username" aria-describedby="basic-addon1">
+                                        <div>@Html.ValidationMessageFor(x => x.Login)</div>
+                                    </div>
+                                </div>
+                                <div class="input-group logar-form font-form">
+                                    <div>
+                                        <input type="password" asp-for="Senha" class="form-control font-form" placeholder="Senha" aria-label="Username" aria-describedby="basic-addon1">
+                                        <div>@Html.ValidationMessageFor(x => x.Senha)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aline-center">
+                            <p class="text-center ffg">
+                                <button type="submit" class="btn btn-warning">Entrar</button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

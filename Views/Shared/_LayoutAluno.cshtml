@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOME-ALUNO</title>
+
+    <link rel="stylesheet" href="css/bootstrap/tamanhos.css">
+    <link rel="stylesheet" href="css/bootstrap/cadastros.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap/home-config.css">
+    <link rel="stylesheet" href="css/bootstrap/fontes.css">
+    <link rel="stylesheet" href="css/bootstrap/tamanhos.css">
+    <link rel="stylesheet" href="css/bootstrap/area-aluno.css">
+
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+    <link href="~/Content/cadastros.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/home1-config.css" rel="stylesheet" />
+    <link href="~/Content/fontes.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+    <link href="~/Content/area-aluno.css" rel="stylesheet" />
+    <script src="~/js/tratpagina.js"></script>
+</head>
+<body>
+    <section class="header-site">
+        <div class="col-6" style="text-align: right">
+            Usuário Logado <label></label> -
+            <a asp-controller="Login" asp-action="Logout">Logout</a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="foto-cabeca row justify-content-center align-items-center linha-cabeca ">
+                        <img class="col-lg-2 col-6 logo-foto foto-config-tamanho" src="~/midia/foto-aluno-nva.png" alt="">
+                        <h1 class="text-center titulo-logo col-lg-8 col-6 text-align-center ">NOME - ALUNO</h1>
+                    </div>
+                    <div class="row justify-content-center align-items-center quadro-link">
+                        <div class="col-4 col-sm-3 link-aluno">
+                            @Html.ActionLink("PESSOAIS", "AlunoPessoais", "Aluno", null, new { @class = "btn btn-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    @RenderBody()
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/js/tratpagina.js"></script>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+   
+</body>
+</html>

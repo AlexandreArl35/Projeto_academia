@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/fontes.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+    <link href="~/Content/home1-config.css" rel="stylesheet" />
+    <link href="~/Content/cadastros.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <section class="header-site">
+        <div class="col-6" style="text-align: right">
+            Usuário Logado <label></label> -
+            <a asp-controller="Login" asp-action="Logout">Logout</a>
+        </div>
+        <div>
+            <a asp-controller="Modalidades" asp-action="Index">Modalidades</a> |
+            <a asp-controller="Alunos" asp-action="Index">Alunos</a> |
+            <a asp-controller="Instrutores" asp-action="Index">Instrutores</a> |
+            <a asp-controller="Pacotes" asp-action="Index">Pacotes</a> |
+        </div>
+
+        @RenderBody()
+
+    </section>
+   
+</body>
+</html>

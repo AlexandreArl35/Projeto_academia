@@ -1,0 +1,89 @@
+﻿@model teste_mvc.Models.Modalidade
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia transforma</title>
+
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/fontes.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+    <link href="~/Content/home1-config.css" rel="stylesheet" />
+    <link href="~/Content/cadastros.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <section class="header-site">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12">
+                    <div class="foto-cabeca row justify-content-center align-items-center linha-cabeca ">
+                        <img class="col-lg-2 col-6 logo-foto foto-config-tamanho" src="~/midia/logo-nova-500.png" alt="">
+                        <h1 class="text-center titulo-logo col-lg-8 col-6 text-align-center ">ACADEMIA TRANSFORMA</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="botto text-center margem1">
+            <h4 class="text-dark">Editar Aluno</h4>
+        </div>
+
+        <div class="principals1 container">
+            <hr class="text-dark" />
+            <form asp-action="Edit">
+                <div class="row">
+
+                    <div class=" col-12 col-sm-6 margem">
+                        <label asp-for="Nome" class="control-label text-dark"></label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                    <div class=" col-12 col-sm-6 margem1">
+                        <label asp-for="Valor" class="control-label text-dark"></label>
+                        <input asp-for="Valor" class="form-control" />
+                        <span asp-validation-for="Valor" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-12 col-sm-6 margem"></div>
+
+                    <div><hr class="text-dark margem" /></div>
+
+                    <div class="principals1 container">
+                        <div class="row">
+                            <div class=" col-6 col-sm-6">
+                                <input type="submit" value="Editar" class="btn btn-secondary" />
+                            </div>
+
+                            <div class=" col-6 col-sm-6">
+                                <a asp-action="Index" class="btn btn-secondary centro">Voltar</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="margem1"></div>
+                </div>
+                <input type="hidden" asp-for="Id" />
+            </form>
+        </div>
+    </section>
+
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+</body>
+</html>
+
+
+

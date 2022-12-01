@@ -1,0 +1,106 @@
+﻿@model IEnumerable<teste_mvc.Models.Pacote>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia transforma</title>
+
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/fontes.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+    <link href="~/Content/home1-config.css" rel="stylesheet" />
+    <link href="~/Content/cadastros.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <section class="header-site">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="foto-cabeca row justify-content-center align-items-center linha-cabeca ">
+                        <img class="col-lg-2 col-6 logo-foto foto-config-tamanho" src="~/midia/logo-nova-500.png" alt="">
+                        <h1 class="text-center titulo-logo col-lg-8 col-6 text-align-center ">ACADEMIA TRANSFORMA</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="botto text-center">
+            <h4 class="text-dark">Pacote</h4>
+            <a class="text-dark" asp-controller="Login" asp-action="Logout">SAIR</a>
+        </div>
+
+        <div class="principals1 container">
+            <div class="row  justify-content-around align-items-center">
+                <div class="espa col-md-12 col-12">
+                    <h4 class="texto-titulo">
+                        <a asp-action="Create" class="text-dark margem1">Novo Cadastro</a>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="tabela-academia4 margem">
+                <table class="tabela-academia1">
+
+                    <thead class="text-dark tabela-academia2 margem">
+                        <tr>
+                            <th>
+                                Descrição
+                            </th>
+
+                            <th>
+                                Valor Mensalidade
+                            </th>
+
+                            <th>
+                                Modalidade
+                            </th>
+
+                            <th>
+                                Opções
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-dark">
+                                    @Html.DisplayFor(modelItem => item.Descricao)
+                                </td>
+                                <td class="text-dark texto-titulo">
+                                    @Html.DisplayFor(modelItem => item.ValorMensalidade)
+                                </td>
+                                <td class="text-dark">
+                                    @Html.DisplayFor(modelItem => item.Modalidades.Nome)
+                                </td>
+                                <td>
+                                    <a class="text-dark" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                                    <a class="text-dark" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div class="margem2"></div>
+            </div>
+        </div>
+
+    </section>
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+</body>
+</html>

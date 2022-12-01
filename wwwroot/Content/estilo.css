@@ -1,0 +1,25 @@
+.borda{
+    margin-top: 20px;
+    
+}
+.margem{
+    margin-top: 100px;
+}
+
+fieldset{
+    padding-top: 30px;
+    margin-left: 120px;
+    padding-right:  100px;
+   margin-right: 205px;
+}
+.border-input{
+    background-color: rgb(57, 177, 207);
+    border: none;
+    font-weight: unset;
+}
+.direita{
+    right:30px;
+}
+topo{
+    padding-top:100px;
+}

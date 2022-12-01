@@ -1,0 +1,71 @@
+﻿@{ 
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia transforma</title>
+
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/fontes.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+    <link href="~/Content/home1-config.css" rel="stylesheet" />
+    <link href="~/Content/cadastros.css" rel="stylesheet" />
+    <link href="~/Content/tamanhos.css" rel="stylesheet" />
+  
+</head>
+<body>
+    <section class="header-site">
+        <div class="container margem">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="foto-cabeca row justify-content-center align-items-center linha-cabeca ">
+                        <img class="col-lg-2 col-6 logo-foto foto-config-tamanho" src="~/midia/logo-nova-500.png" alt="">
+                        <h1 class="text-center titulo-logo col-lg-8 col-6 text-align-center ">ACADEMIA TRANSFORMA</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="botto text-center margem">
+            <h4 class="text-dark margem">MENU</h4>
+            <a class="text-dark" asp-controller="Login" asp-action="Logout">SAIR</a>
+        </div>
+
+        <hr class="text-dark margem" />
+        <div class="row margem">
+
+            <div class=" col 12 col-sm-6 margem botto text-center">
+                <a class="text-dark margem h5" asp-controller="Modalidades" asp-action="Index">Cadastrar Modalidades</a> 
+            </div>
+
+            <div class=" col 12 col-sm-6 margem botto text-center">
+                <a class="text-dark margem h5" asp-controller="Alunos" asp-action="Index">Cadastrar Alunos</a> 
+            </div>
+
+            <div class=" col 12 col-sm-6 margem botto text-center">
+                <a class="text-dark margem h5" asp-controller="Instrutores" asp-action="Index">Cadastrar Instrutores</a> 
+            </div>
+
+            <div class=" col 12 col-sm-6 margem botto text-center">
+                <a class="text-dark margem h5" asp-controller="Pacotes" asp-action="Index">Cadastrar Pacotes</a> 
+            </div>
+            <div><hr class="text-dark margem" /></div>
+        </div>
+        <div class="margem"></div>
+
+
+
+    </section>
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+</body>
+</html>
